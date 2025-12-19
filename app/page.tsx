@@ -253,156 +253,8 @@ export default function Home() {
         <SimplifiedSimulator />
       </section>
 
-      {/* Porteurs de projet */}
-      <section id="porteurs-projet" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-8 text-center tracking-tight">
-            Vous montez votre business ?
-          </h2>
-          <p className="text-base text-slate-600 dark:text-slate-300 mb-12 text-center font-light">
-            Accompagnement des porteurs de projet pour choisir la bonne solution de paiement dès le départ
-          </p>
-
-          <div className="bg-white dark:bg-slate-900 p-8 border border-slate-200 dark:border-slate-700">
-            <div className="space-y-6 mb-8">
-              <div>
-                <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">
-                  Rédaction de l'expression de besoin
-                </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Je rédige pour vous l'expression de besoin à présenter aux banques et prestataires. 
-                  Document professionnel qui cadre vos attentes et facilite les comparaisons.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">
-                  Mise en relation avec des prestataires de confiance
-                </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Je connais les bons acteurs du marché. Je vous mets en contact avec des prestataires 
-                  fiables et adaptés à votre secteur d'activité.
-                </p>
-              </div>
-
-              <div>
-                <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">
-                  Accompagnement dans le choix de votre solution
-                </h3>
-                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
-                  Conseil personnalisé pour choisir la solution monétique la plus adaptée à votre activité, 
-                  votre volume et vos besoins. Évitez les mauvais choix qui coûtent cher.
-                </p>
-              </div>
-            </div>
-
-            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 p-4 rounded-sm mb-6">
-              <p className="text-blue-900 dark:text-blue-100 font-medium mb-1 text-sm">Pourquoi c'est important ?</p>
-              <p className="text-blue-800 dark:text-blue-200 text-sm leading-relaxed">
-                Choisir la bonne solution de paiement dès le départ vous évite de payer trop cher pendant des années. 
-                La plupart des entrepreneurs signent le premier contrat qu'on leur propose, sans comparer ni négocier.
-              </p>
-            </div>
-
-            <div className="text-center">
-              <a
-                href="https://calendly.com/infomone-consulting/reservation-d-appel"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block px-8 py-3 bg-[#2563eb] text-white font-normal rounded-sm hover:bg-[#1d4ed8] transition-colors text-base"
-              >
-                Échanger sur mon projet
-              </a>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Témoignages */}
-      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-white">
-        <div className="max-w-4xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-normal text-slate-900 mb-20 text-center tracking-tight">
-            Cas clients & témoignages
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div className="p-8 border-l border-slate-300">
-              <p className="text-slate-600 mb-6 leading-relaxed font-light">
-                "En 3 semaines, nous avons réduit nos frais de CB de 29%. J'ai enfin compris ce que je payais réellement."
-              </p>
-              <p className="text-sm text-slate-700">
-                — Marie, gérante d'une boulangerie
-              </p>
-            </div>
-
-            <div className="p-8 border-l border-slate-300">
-              <p className="text-slate-600 mb-6 leading-relaxed font-light">
-                "Sans changer de banque, nous avons récupéré près de 6 000 € par an. Le process était clair et accompagné de A à Z."
-              </p>
-              <p className="text-sm text-slate-700">
-                — Karim, restaurateur
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Bio / À propos */}
-      <section id="about" className="py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
-        <div className="max-w-5xl mx-auto">
-          <h2 className="text-3xl sm:text-4xl font-normal text-slate-900 dark:text-white mb-20 text-center tracking-tight">
-            À propos de David
-          </h2>
-          <div className="bg-white dark:bg-slate-900 p-8 sm:p-12 border border-slate-200 dark:border-slate-700">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-              {/* Photo David Coquin */}
-              <div className="flex justify-center md:justify-start">
-                <div className="relative w-48 h-48 rounded-sm overflow-hidden border-2 border-slate-200 dark:border-slate-700">
-                  <Image
-                    src="/David_COQUIN.png"
-                    alt="David Coquin - Consultant Monétique"
-                    fill
-                    className="object-cover"
-                    sizes="(max-width: 768px) 192px, 192px"
-                  />
-                </div>
-              </div>
-              
-              {/* Bio */}
-              <div className="md:col-span-2 space-y-6 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-light">
-                <p>
-                  <strong className="text-slate-900 dark:text-white font-medium">Plus de 10 ans d'expérience</strong> dans la monétique et les systèmes de paiement.
-                </p>
-                <p>
-                  A accompagné banques, fintechs et commerces de proximité dans l'optimisation de leurs solutions de paiement.
-                </p>
-                <p>
-                  Aujourd'hui : se consacre à aider les commerçants et PME à reprendre la main sur leurs frais bancaires.
-                </p>
-              </div>
-            </div>
-            
-            <div className="border-t border-slate-200 dark:border-slate-700 pt-8 mt-8">
-              <div className="space-y-4 text-base text-slate-700 dark:text-slate-300 leading-relaxed">
-                <p className="font-medium text-slate-900 dark:text-white">
-                  Mon constat
-                </p>
-                <p>
-                  Les commissions bancaires sont souvent la ligne de frais que personne ne regarde. Les commerçants signent, paient, et ne remettent jamais en question leurs contrats.
-                </p>
-                <p className="font-medium text-slate-900 dark:text-white mt-6">
-                  Mon métier
-                </p>
-                <p>
-                  Rendre ces frais lisibles, les corriger quand ils sont injustifiés, et négocier pour que vous payiez le juste prix, pas plus.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Processus */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+      {/* Processus - DÉPLACÉ ICI */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-8 text-center tracking-tight">
             Comment ça se passe ?
@@ -510,6 +362,154 @@ export default function Home() {
             >
               Réserver mon appel gratuit de 30 minutes
             </a>
+          </div>
+        </div>
+      </section>
+
+      {/* Témoignages */}
+      <section className="py-32 px-4 sm:px-6 lg:px-8 bg-white">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-normal text-slate-900 mb-20 text-center tracking-tight">
+            Cas clients & témoignages
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+            <div className="p-8 border-l border-slate-300">
+              <p className="text-slate-600 mb-6 leading-relaxed font-light">
+                "En 3 semaines, nous avons réduit nos frais de CB de 29%. J'ai enfin compris ce que je payais réellement."
+              </p>
+              <p className="text-sm text-slate-700">
+                — Marie, gérante d'une boulangerie
+              </p>
+            </div>
+
+            <div className="p-8 border-l border-slate-300">
+              <p className="text-slate-600 mb-6 leading-relaxed font-light">
+                "Sans changer de banque, nous avons récupéré près de 6 000 € par an. Le process était clair et accompagné de A à Z."
+              </p>
+              <p className="text-sm text-slate-700">
+                — Karim, restaurateur
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Bio / À propos */}
+      <section id="about" className="py-32 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
+        <div className="max-w-5xl mx-auto">
+          <h2 className="text-3xl sm:text-4xl font-normal text-slate-900 dark:text-white mb-20 text-center tracking-tight">
+            À propos de David
+          </h2>
+          <div className="bg-white dark:bg-slate-900 p-8 sm:p-12 border border-slate-200 dark:border-slate-700">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+              {/* Photo David Coquin */}
+              <div className="flex justify-center md:justify-start">
+                <div className="relative w-48 h-48 rounded-sm overflow-hidden border-2 border-slate-200 dark:border-slate-700">
+                  <Image
+                    src="/David_COQUIN.png"
+                    alt="David Coquin - Consultant Monétique"
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 768px) 192px, 192px"
+                  />
+                </div>
+              </div>
+              
+              {/* Bio */}
+              <div className="md:col-span-2 space-y-6 text-base sm:text-lg text-slate-600 dark:text-slate-300 leading-relaxed font-light">
+                <p>
+                  <strong className="text-slate-900 dark:text-white font-medium">Plus de 10 ans d'expérience</strong> dans la monétique et les systèmes de paiement.
+                </p>
+                <p>
+                  A accompagné banques, fintechs et commerces de proximité dans l'optimisation de leurs solutions de paiement.
+                </p>
+                <p>
+                  Aujourd'hui : se consacre à aider les commerçants et PME à reprendre la main sur leurs frais bancaires.
+                </p>
+              </div>
+            </div>
+            
+            <div className="border-t border-slate-200 dark:border-slate-700 pt-8 mt-8">
+              <div className="space-y-4 text-base text-slate-700 dark:text-slate-300 leading-relaxed">
+                <p className="font-medium text-slate-900 dark:text-white">
+                  Mon constat
+                </p>
+                <p>
+                  Les commissions bancaires sont souvent la ligne de frais que personne ne regarde. Les commerçants signent, paient, et ne remettent jamais en question leurs contrats.
+                </p>
+                <p className="font-medium text-slate-900 dark:text-white mt-6">
+                  Mon métier
+                </p>
+                <p>
+                  Rendre ces frais lisibles, les corriger quand ils sont injustifiés, et négocier pour que vous payiez le juste prix, pas plus.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Porteurs de projet - DÉPLACÉ ICI */}
+      <section id="porteurs-projet" className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-8 text-center tracking-tight">
+            Vous montez votre business ?
+          </h2>
+          <p className="text-base text-slate-600 dark:text-slate-300 mb-12 text-center font-light">
+            Accompagnement des porteurs de projet pour choisir la bonne solution de paiement dès le départ
+          </p>
+
+          <div className="bg-white dark:bg-slate-800 p-8 border border-slate-200 dark:border-slate-700">
+            <div className="space-y-6 mb-8">
+              <div>
+                <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">
+                  Rédaction de l'expression de besoin
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Je rédige pour vous l'expression de besoin à présenter aux banques et prestataires. 
+                  Document professionnel qui cadre vos attentes et facilite les comparaisons.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">
+                  Mise en relation avec des prestataires de confiance
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Je connais les bons acteurs du marché. Je vous mets en contact avec des prestataires 
+                  fiables et adaptés à votre secteur d'activité.
+                </p>
+              </div>
+
+              <div>
+                <h3 className="text-lg font-medium text-slate-900 dark:text-white mb-2">
+                  Accompagnement dans le choix de votre solution
+                </h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+                  Conseil personnalisé pour choisir la solution monétique la plus adaptée à votre activité, 
+                  votre volume et vos besoins. Évitez les mauvais choix qui coûtent cher.
+                </p>
+              </div>
+            </div>
+
+            <div className="bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 p-4 rounded-sm mb-6">
+              <p className="text-blue-900 dark:text-blue-100 font-medium mb-1 text-sm">Pourquoi c'est important ?</p>
+              <p className="text-blue-800 dark:text-blue-200 text-sm leading-relaxed">
+                Choisir la bonne solution de paiement dès le départ vous évite de payer trop cher pendant des années. 
+                La plupart des entrepreneurs signent le premier contrat qu'on leur propose, sans comparer ni négocier.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <a
+                href="https://calendly.com/infomone-consulting/reservation-d-appel"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-3 bg-[#2563eb] text-white font-normal rounded-sm hover:bg-[#1d4ed8] transition-colors text-base"
+              >
+                Échanger sur mon projet
+              </a>
+            </div>
           </div>
         </div>
       </section>
