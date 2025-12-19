@@ -1,6 +1,7 @@
 import SimplifiedSimulator from '@/components/SimplifiedSimulator';
 import AuditForm from '@/components/AuditForm';
 import Navbar from '@/components/Navbar';
+import { AccordionItem } from '@/components/Accordion';
 import Image from 'next/image';
 
 export default function Home() {
@@ -9,49 +10,64 @@ export default function Home() {
       <Navbar />
       
       {/* Hero Section */}
-      <section className="bg-white dark:bg-slate-900 pt-40 pb-32 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Logo Infomone Consulting */}
-          <div className="mb-12 flex justify-center">
-            <Image
-              src="/InfoMoneConsultingLogo.jpg"
-              alt="Infomone Consulting"
-              width={300}
-              height={100}
-              priority
-              className="h-auto w-auto max-w-[250px] sm:max-w-[300px]"
-            />
+      <section className="bg-white dark:bg-slate-900 pt-32 pb-20 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            {/* Texte à gauche */}
+            <div>
+              <h1 className="text-3xl sm:text-4xl lg:text-5xl font-normal text-slate-900 dark:text-white mb-6 leading-tight tracking-tight">
+                Réduisez jusqu'à 30% vos commissions bancaires
+              </h1>
+              <p className="text-base sm:text-lg text-slate-600 dark:text-slate-300 mb-8 leading-relaxed font-light">
+                Sans changer de banque, sans changer de terminal, simplement en optimisant vos contrats et vos frais.
+              </p>
+              
+              {/* Promesse avec animation */}
+              <div className="mb-8 p-4 border-l-4 border-[#2563eb] bg-blue-50 dark:bg-blue-900/20 animate-fade-in">
+                <p className="text-base text-slate-900 dark:text-white font-medium">
+                  Si je ne vous fais pas économiser de l'argent, je ne vous fais pas payer.
+                </p>
+              </div>
+
+              <div className="space-y-4">
+                <a
+                  href="https://calendly.com/infomone-consulting/reservation-d-appel"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block px-8 py-3 bg-[#2563eb] text-white font-normal rounded-sm hover:bg-[#1d4ed8] transition-colors text-base"
+                >
+                  Réserver mon appel gratuit de 30 minutes
+                </a>
+                <p className="text-sm text-slate-500 dark:text-slate-400 font-light">
+                  Premier entretien gratuit – Si et seulement si je peux vous aider, on passe à l'étape suivante.
+                </p>
+              </div>
+            </div>
+
+            {/* Logo à droite */}
+            <div className="flex justify-center md:justify-end">
+              <Image
+                src="/InfoMoneConsultingLogo.jpg"
+                alt="Infomone Consulting"
+                width={400}
+                height={400}
+                priority
+                className="w-full max-w-[300px] sm:max-w-[400px] h-auto"
+              />
+            </div>
           </div>
-          
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-normal text-slate-900 dark:text-white mb-8 leading-tight tracking-tight">
-            Réduisez jusqu'à 30% vos commissions bancaires sur les paiements par carte
-          </h1>
-          <p className="text-lg sm:text-xl text-slate-600 dark:text-slate-300 mb-12 max-w-2xl mx-auto leading-relaxed font-light">
-            Sans changer de banque, sans changer de terminal, simplement en optimisant vos contrats et vos frais.
-          </p>
-          <div className="inline-block px-6 py-3 mb-12 border border-slate-200 dark:border-slate-700 bg-slate-50 dark:bg-slate-800">
-            <p className="text-base text-slate-700 dark:text-slate-300">
-              En moyenne, nos clients économisent <span className="font-medium">–25 à –30%</span> sur leurs frais de CB.
-            </p>
-          </div>
-          <div className="space-y-4">
-            <a
-              href="https://calendly.com/infomone-consulting/reservation-d-appel"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-block px-8 py-3 bg-[#2563eb] text-white font-normal rounded-sm hover:bg-[#1d4ed8] transition-colors text-base"
-            >
-              Réserver mon appel gratuit de 30 minutes
-            </a>
-            <p className="text-sm text-slate-500 dark:text-slate-400 font-light">
-              Premier entretien gratuit – Si et seulement si je peux vous aider, on passe à l'étape suivante.
+
+          {/* Stats */}
+          <div className="mt-12 text-center">
+            <p className="text-sm text-slate-600 dark:text-slate-400 font-light">
+              En moyenne, nos clients économisent <span className="font-medium text-slate-900 dark:text-white">25 à 30%</span> sur leurs frais de CB.
             </p>
           </div>
         </div>
       </section>
 
       {/* Idées reçues */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-8 text-center tracking-tight">
             Les idées reçues sur les commissions bancaires
@@ -238,7 +254,7 @@ export default function Home() {
       </section>
 
       {/* Porteurs de projet */}
-      <section id="porteurs-projet" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
+      <section id="porteurs-projet" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-8 text-center tracking-tight">
             Vous montez votre business ?
@@ -386,7 +402,7 @@ export default function Home() {
       </section>
 
       {/* Processus */}
-      <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-slate-900">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-8 text-center tracking-tight">
             Comment ça se passe ?
@@ -499,19 +515,15 @@ export default function Home() {
       </section>
 
       {/* FAQ / Informations pratiques */}
-      <section id="faq" className="py-20 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
+      <section id="faq" className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-800">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-2xl sm:text-3xl font-normal text-slate-900 dark:text-white mb-8 text-center tracking-tight">
-            Informations pratiques & FAQ
+            Questions fréquentes
           </h2>
 
-          <div className="space-y-4">
-            {/* Question 1 */}
-            <div className="bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700 rounded-sm">
-              <h3 className="text-base font-medium text-slate-900 dark:text-white mb-3">
-                Qu'est-ce que le RAFEC et où le trouver ?
-              </h3>
-              <div className="space-y-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+          <div className="space-y-3">
+            <AccordionItem title="Qu'est-ce que le RAFEC et où le trouver ?" defaultOpen={true}>
+              <div className="space-y-2">
                 <p>
                   <strong>RAFEC</strong> = <strong>Relevé d'Activité et Frais d'Encaissement Carte</strong>
                 </p>
@@ -524,34 +536,26 @@ export default function Home() {
                 <p>
                   <strong>Contenu :</strong> Détail de vos frais de transaction, frais fixes, location TPE, options, etc.
                 </p>
-                <p className="text-sm bg-blue-50 dark:bg-blue-900/20 p-3 rounded border border-blue-200 dark:border-blue-800 text-blue-900 dark:text-blue-100">
+                <p className="mt-3 bg-blue-50 dark:bg-blue-900/30 p-3 rounded border border-blue-200 dark:border-blue-800 text-blue-900 dark:text-blue-100">
                   <strong>Processus simple :</strong> Téléchargez vos 3 derniers RAFEC et envoyez-les lors de l'audit. 
                   C'est tout ce dont j'ai besoin pour analyser votre situation.
                 </p>
               </div>
-            </div>
+            </AccordionItem>
 
-            {/* Question 2 */}
-            <div className="bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700 rounded-sm">
-              <h3 className="text-base font-medium text-slate-900 dark:text-white mb-3">
-                Combien de temps prend le processus ?
-              </h3>
-              <div className="space-y-2 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            <AccordionItem title="Combien de temps prend le processus ?">
+              <div className="space-y-2">
                 <p>• <strong>Premier appel :</strong> 30 minutes, immédiatement planifiable</p>
                 <p>• <strong>Audit :</strong> 5 à 7 jours ouvrés</p>
                 <p>• <strong>Plan d'action :</strong> 2 à 4 semaines selon la complexité</p>
-                <p className="pt-3 text-sm">
+                <p className="pt-2">
                   En moyenne, mes clients voient les premiers résultats en <strong>moins d'un mois</strong>.
                 </p>
               </div>
-            </div>
+            </AccordionItem>
 
-            {/* Question 3 */}
-            <div className="bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700 rounded-sm">
-              <h3 className="text-base font-medium text-slate-900 dark:text-white mb-3">
-                Comment sont calculés vos honoraires ?
-              </h3>
-              <div className="space-y-3 text-slate-600 leading-relaxed">
+            <AccordionItem title="Comment sont calculés vos honoraires ?">
+              <div className="space-y-3">
                 <p>
                   Les <strong>deux premières étapes sont gratuites</strong> (appel + audit).
                 </p>
@@ -559,18 +563,14 @@ export default function Home() {
                   Si vous décidez de mettre en place le plan d'action, mes honoraires sont calculés au succès : 
                   je ne gagne que si vous économisez réellement de l'argent.
                 </p>
-                <p className="text-sm bg-green-50 dark:bg-green-900/20 p-3 rounded border border-green-200 dark:border-green-800 text-green-900 dark:text-green-100">
+                <p className="mt-3 bg-green-50 dark:bg-green-900/30 p-3 rounded border border-green-200 dark:border-green-800 text-green-900 dark:text-green-100">
                   <strong>Ma garantie :</strong> Si je ne vous fais pas économiser de l'argent, je ne vous fais pas payer.
                 </p>
               </div>
-            </div>
+            </AccordionItem>
 
-            {/* Question 4 */}
-            <div className="bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700 rounded-sm">
-              <h3 className="text-base font-medium text-slate-900 dark:text-white mb-3">
-                Dois-je changer de banque ?
-              </h3>
-              <div className="space-y-3 text-slate-600 leading-relaxed">
+            <AccordionItem title="Dois-je changer de banque ?">
+              <div className="space-y-2">
                 <p>
                   <strong>Non, pas nécessairement.</strong> Dans la majorité des cas, on renégocie avec votre banque actuelle.
                 </p>
@@ -579,18 +579,14 @@ export default function Home() {
                   Vous gardez toujours le <strong>libre choix</strong> de votre prestataire final.
                 </p>
               </div>
-            </div>
+            </AccordionItem>
 
-            {/* Question 5 */}
-            <div className="bg-white dark:bg-slate-900 p-6 border border-slate-200 dark:border-slate-700 rounded-sm">
-              <h3 className="text-base font-medium text-slate-900 dark:text-white mb-3">
-                Pour quel type de commerce ?
-              </h3>
-              <div className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+            <AccordionItem title="Pour quel type de commerce ?">
+              <div>
                 <p className="mb-3">
                   J'accompagne tous types de commerces et entreprises qui encaissent par carte bancaire :
                 </p>
-                <div className="grid grid-cols-2 gap-3 text-sm">
+                <div className="grid grid-cols-2 gap-2">
                   <div className="flex items-center">
                     <span className="mr-2">✓</span> Commerces de proximité
                   </div>
@@ -611,7 +607,7 @@ export default function Home() {
                   </div>
                 </div>
               </div>
-            </div>
+            </AccordionItem>
           </div>
 
           <div className="mt-8 text-center">

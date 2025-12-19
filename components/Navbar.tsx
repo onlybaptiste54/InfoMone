@@ -45,10 +45,10 @@ export default function Navbar() {
               className="flex items-center space-x-3"
             >
               <Image
-                src="/logo.svg"
+                src="/InfoMoneConsultingLogo.jpg"
                 alt="Infomone Consulting"
-                width={140}
-                height={40}
+                width={180}
+                height={50}
                 className="h-10 w-auto"
                 priority
               />

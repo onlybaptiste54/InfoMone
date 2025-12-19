@@ -53,7 +53,7 @@ h1, h2, h3, h4, h5, h6 {
   outline-offset: 2px;
 }
 
-/* Animation fade in */
+/* Animations */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -65,6 +65,21 @@ h1, h2, h3, h4, h5, h6 {
   }
 }
 
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.95;
+    transform: scale(1.02);
+  }
+}
+
 .animate-fadeIn {
   animation: fadeIn 0.5s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s ease-out, pulse 3s ease-in-out infinite 1s;
 }
