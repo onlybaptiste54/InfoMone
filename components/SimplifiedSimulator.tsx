@@ -65,39 +65,39 @@ export default function SimplifiedSimulator() {
   const getStatusColor = (status: 'ok' | 'warning' | 'urgent') => {
     switch (status) {
       case 'ok':
-        return 'bg-green-50 border-green-200';
+        return 'bg-green-50 dark:bg-green-900/20 border-green-200 dark:border-green-800';
       case 'warning':
-        return 'bg-orange-50 border-orange-200';
+        return 'bg-orange-50 dark:bg-orange-900/20 border-orange-200 dark:border-orange-800';
       case 'urgent':
-        return 'bg-red-50 border-red-200';
+        return 'bg-red-50 dark:bg-red-900/20 border-red-200 dark:border-red-800';
     }
   };
 
   const getStatusText = (status: 'ok' | 'warning' | 'urgent') => {
     switch (status) {
       case 'ok':
-        return { text: 'Vos taux semblent corrects', color: 'text-green-800' };
+        return { text: 'Vos taux semblent corrects', color: 'text-green-800 dark:text-green-200' };
       case 'warning':
-        return { text: 'Une négociation est possible', color: 'text-orange-800' };
+        return { text: 'Une négociation est possible', color: 'text-orange-800 dark:text-orange-200' };
       case 'urgent':
-        return { text: 'Action immédiate recommandée', color: 'text-red-800' };
+        return { text: 'Action immédiate recommandée', color: 'text-red-800 dark:text-red-200' };
     }
   };
 
   return (
     <div className="max-w-4xl mx-auto">
       <div className="text-center mb-12">
-        <h2 className="text-3xl sm:text-4xl font-normal text-slate-900 mb-6 tracking-tight">
+        <h2 className="text-3xl sm:text-4xl font-normal text-slate-900 dark:text-white mb-6 tracking-tight">
           Estimez vos commissions CB en 30 secondes
         </h2>
-        <p className="text-base text-slate-600 font-light">
+        <p className="text-base text-slate-600 dark:text-slate-300 font-light">
           Pas de friction, entrez simplement votre chiffre d'affaires mensuel
         </p>
       </div>
 
-      <div className="bg-slate-50 p-8 sm:p-12 border border-slate-200">
+      <div className="bg-slate-50 dark:bg-slate-800 p-8 sm:p-12 border border-slate-200 dark:border-slate-700">
         <div className="mb-8">
-          <label htmlFor="ca-mensuel" className="block text-lg font-medium text-slate-700 mb-4">
+          <label htmlFor="ca-mensuel" className="block text-lg font-medium text-slate-700 dark:text-slate-300 mb-4">
             Quel est votre CA mensuel encaissé par carte bancaire ?
           </label>
           <div className="relative">
@@ -106,10 +106,12 @@ export default function SimplifiedSimulator() {
               id="ca-mensuel"
               value={caMensuel}
               onChange={(e) => setCaMensuel(e.target.value)}
-              className="w-full px-6 py-4 text-lg border-2 border-slate-300 rounded-sm focus:outline-none focus:border-[#2563eb] transition-colors"
+              className="w-full px-6 pr-12 py-4 text-lg border-2 border-slate-300 dark:border-slate-600 rounded-sm focus:outline-none focus:border-[#2563eb] transition-colors bg-white dark:bg-slate-800 text-slate-900 dark:text-white"
               placeholder="Ex: 50000"
+              min="0"
+              step="100"
             />
-            <span className="absolute right-6 top-1/2 -translate-y-1/2 text-slate-500 text-lg">€</span>
+            <span className="absolute right-6 top-1/2 -translate-y-1/2 text-slate-500 dark:text-slate-400 text-lg pointer-events-none">€</span>
           </div>
         </div>
 
@@ -121,12 +123,12 @@ export default function SimplifiedSimulator() {
         </button>
 
         {/* Toggle Info pratique */}
-        <div className="border-t border-slate-300 pt-6">
+        <div className="border-t border-slate-300 dark:border-slate-600 pt-6">
           <button
             onClick={() => setShowInfo(!showInfo)}
-            className="flex items-center justify-between w-full text-left text-sm text-slate-600 hover:text-slate-900 transition-colors"
+            className="flex items-center justify-between w-full text-left text-sm text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white transition-colors"
           >
-            <span className="font-medium">📋 Où trouver mon RAFEC ?</span>
+            <span className="font-medium">Où trouver mon RAFEC ?</span>
             <svg
               className={`w-5 h-5 transition-transform ${showInfo ? 'rotate-180' : ''}`}
               fill="none"
@@ -138,16 +140,16 @@ export default function SimplifiedSimulator() {
           </button>
           
           {showInfo && (
-            <div className="mt-4 p-4 bg-white border border-slate-200 rounded-sm text-sm text-slate-600 leading-relaxed">
-              <p className="font-medium text-slate-900 mb-2">RAFEC = Relevé d'Activité et Frais d'Encaissement Carte</p>
+            <div className="mt-4 p-4 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-700 rounded-sm text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
+              <p className="font-medium text-slate-900 dark:text-white mb-2">RAFEC = Relevé d'Activité et Frais d'Encaissement Carte</p>
               <p className="mb-2">
-                📍 <strong>Où le trouver :</strong> Dans l'espace client de votre banque, section "Documents" ou "Monétique"
+                <strong>Où le trouver :</strong> Dans l'espace client de votre banque, section "Documents" ou "Monétique"
               </p>
               <p className="mb-2">
-                📅 <strong>Fréquence :</strong> Document mensuel récapitulant toutes vos commissions CB
+                <strong>Fréquence :</strong> Document mensuel récapitulant toutes vos commissions CB
               </p>
               <p>
-                💡 <strong>Processus simple :</strong> Téléchargez-le et envoyez-le lors de votre audit gratuit
+                <strong>Processus simple :</strong> Téléchargez-le et envoyez-le lors de votre audit gratuit
               </p>
             </div>
           )}
@@ -159,28 +161,25 @@ export default function SimplifiedSimulator() {
               <h3 className={`text-xl font-medium ${getStatusText(resultats.status).color}`}>
                 {getStatusText(resultats.status).text}
               </h3>
-              {resultats.status === 'ok' && <span className="text-3xl">✅</span>}
-              {resultats.status === 'warning' && <span className="text-3xl">⚠️</span>}
-              {resultats.status === 'urgent' && <span className="text-3xl">🚨</span>}
             </div>
 
             <div className="space-y-4 mb-6">
-              <div className="bg-white p-4 rounded-sm border border-slate-200">
-                <p className="text-sm text-slate-500 mb-1">Taux moyen recommandé pour votre CA</p>
-                <p className="text-2xl font-normal text-slate-900">{resultats.tauxMoyen.toFixed(2)}%</p>
+              <div className="bg-white dark:bg-slate-900 p-4 rounded-sm border border-slate-200 dark:border-slate-700">
+                <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">Taux moyen recommandé pour votre CA</p>
+                <p className="text-2xl font-normal text-slate-900 dark:text-white">{resultats.tauxMoyen.toFixed(2)}%</p>
               </div>
 
-              <div className="bg-white p-4 rounded-sm border border-slate-200">
-                <p className="text-sm text-slate-500 mb-1">Ce que vous devriez payer (optimal)</p>
-                <p className="text-2xl font-normal text-slate-900">
+              <div className="bg-white dark:bg-slate-900 p-4 rounded-sm border border-slate-200 dark:border-slate-700">
+                <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">Ce que vous devriez payer (optimal)</p>
+                <p className="text-2xl font-normal text-slate-900 dark:text-white">
                   {Math.round(resultats.commissionsOptimales).toLocaleString('fr-FR')} € / mois
                 </p>
               </div>
 
               {resultats.status !== 'ok' && (
-                <div className="bg-white p-4 rounded-sm border border-slate-200">
-                  <p className="text-sm text-slate-500 mb-1">Économies potentielles par an</p>
-                  <p className="text-2xl font-normal text-green-600">
+                <div className="bg-white dark:bg-slate-900 p-4 rounded-sm border border-slate-200 dark:border-slate-700">
+                  <p className="text-sm text-slate-500 dark:text-slate-400 mb-1">Économies potentielles par an</p>
+                  <p className="text-2xl font-normal text-green-600 dark:text-green-400">
                     {Math.round((resultats.commissionsEstimees - resultats.commissionsOptimales) * 12).toLocaleString('fr-FR')} €
                   </p>
                 </div>
@@ -192,11 +191,11 @@ export default function SimplifiedSimulator() {
                 onClick={scrollToCalendly}
                 className="w-full px-8 py-4 bg-[#2563eb] text-white font-normal rounded-sm hover:bg-[#1d4ed8] transition-colors text-base"
               >
-                🗓️ Réserver mon appel gratuit de 30 minutes
+                Réserver mon appel gratuit de 30 minutes
               </button>
             ) : (
               <div className="text-center">
-                <p className="text-sm text-slate-600 mb-3">
+                <p className="text-sm text-slate-600 dark:text-slate-300 mb-3">
                   Vous souhaitez quand même optimiser vos frais ?
                 </p>
                 <button
