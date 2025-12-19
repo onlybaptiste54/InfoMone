@@ -47,3 +47,4 @@ export function AccordionItem({ title, children, defaultOpen = false }: Accordio
   );
 }
 
+
